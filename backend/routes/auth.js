@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   res.send("Auth API running ✅");
 });
 
-// ✅ REGISTER
+// REGISTER
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -30,8 +30,7 @@ router.post("/register", async (req, res) => {
     res.status(500).json({ message: "Registration failed", error });
   }
 });
-
-// ✅ LOGIN
+// LOGIN
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
